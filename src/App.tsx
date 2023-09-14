@@ -37,13 +37,15 @@ export function App() {
       <header className="px-6 py-3 flex items-center justify-between border-b">
         <h1 className="text-xl font-bold flex flex-col gap-2 lg:flex-row lg:items-center justify-center">
           upload.ai
-          <span className="text-sm text-muted-foreground">Desenvolvido com ❤️ no NLW da Rocketseat</span>
+          <span className="text-sm text-muted-foreground">Desenvolvido com ❤️ no NLW da <a href="https://www.rocketseat.com.br/" target='_blank' title="Site da rocketseat">Rocketseat</a></span>
         </h1>
 
         <div className="flex items-center gap-3">
-          <Button variant="outline">
-            <Github className='w-4 h-4 mr-2' />
-            Github
+          <Button variant="outline" asChild>
+            <a href="https://github.com/ivanfuhr/upload-ai-web" title="Ver o repositório do projeto" target='_blank'>
+              <Github className='w-4 h-4 mr-2' />
+              Github
+            </a>
           </Button>
         </div>
       </header>
