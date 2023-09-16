@@ -4,6 +4,8 @@ O Upload.AI é uma plataforma que criei para facilitar a transcrição de vídeo
 
 Este projeto foi desenvolvido durante o evento NLW (Next Level Week) da Rocketseat, e eu gostaria de expressar minha gratidão à Rocketseat por fornecer a base para esta incrível plataforma.
 
+Veja o projeto em produção, [clicando aqui](https://upload-ai.ivanfuhr.com/)
+
 ![Upload.AI NLW](https://upload-ai.ivanfuhr.com/wallpaper.png)
 
 ## Funcionalidades Principais
