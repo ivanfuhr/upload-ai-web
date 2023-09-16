@@ -1,9 +1,8 @@
 # Builder
 FROM node:18-alpine as builder
 WORKDIR /app
-COPY package.json pnpm-lock.yaml ./
-RUN npm install -g pnpm
-RUN pnpm install
+COPY package.json ./
+RUN npm install
 COPY . .
 RUN npm run build
 

@@ -1,7 +1,8 @@
 import { useCompletion } from 'ai/react';
-import { Github, Wand2 } from 'lucide-react';
+import { AlertTriangle, Github, Wand2 } from 'lucide-react';
 import { useState } from 'react';
 import { PromptSelect } from './components/prompt-select';
+import { Alert, AlertDescription, AlertTitle } from './components/ui/alert';
 import { Button } from "./components/ui/button";
 import { Label } from './components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './components/ui/select';
@@ -74,7 +75,9 @@ export function App() {
         </section>
 
         <aside className='space-y-6 w-full md:w-80'>
+
           <VideoInputForm onVideoUploaded={setVideoId} />
+
           <Separator />
 
           <form className='space-y-6' onSubmit={handleSubmit}>
@@ -119,10 +122,27 @@ export function App() {
 
             <Separator />
 
-            <Button type='submit' className='w-full' disabled={isLoading}>
-              Executar
-              <Wand2 className='h-4 w-4 ml-2' />
-            </Button>
+            <div className='space-y-2'>
+              {
+                !videoId && (
+                  <Alert>                 
+                    <AlertTriangle className="h-4 w-4" />
+                    <AlertTitle>Faça um upload!</AlertTitle>
+                    <AlertDescription>
+                      Você precisa fazer o upload de um vídeo para poder utilizar a IA
+                    </AlertDescription>
+                  </Alert>
+                )
+              }
+
+              <Button type='submit' className='w-full' disabled={isLoading || !videoId}>
+                Executar
+                <Wand2 className='h-4 w-4 ml-2' />
+              </Button>
+            </div>
+
+
+
           </form>
         </aside>
       </main>
